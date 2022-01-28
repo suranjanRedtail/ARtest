@@ -30,8 +30,33 @@
       var search = new URLSearchParams(window.location.href.split('?')[1]);
       if(search.has("filename"))
       {
-        $("#modelviewer").attr("src","./assets/"+search.get("filename")+".glb");
+      var filepath ="./assets/"+search.get("filename")+".glb";
+      var filepath2 ="./assets/"+search.get("filename")+".gltf";
+        check(filepath,
+        function(){
+          console.log("no glb file found. looking for gltf");
+          check(filepath2,
+          function(){console.log("no gltf file found. \n Couldnt load "+search.get("filename"));},
+          function(){console.log("gltf file found."); setmodelviewerurl(filepath2)})
+        },
+        function(){setmodelviewerurl(filepath)});
       }
+
+      //checks if file exists, callback fucntions for onerror or success
+      function check(path,onerror,onsuccess){
+        $.ajax({
+        url:path,
+        type:'HEAD',
+        error:onerror,
+        success:onsuccess
+      });
+      }  
+
+      //sets model viewer source url
+      function setmodelviewerurl(url)
+      {
+        $("#modelviewer").attr("src",url);
+      }    
     </script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
