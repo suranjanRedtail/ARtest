@@ -1,0 +1,42 @@
+*{
+	touch-action: none;
+	margin: 0px;
+  }
+@font-face{
+	font-family: "GameFont";
+	size: 20px;
+	src: url("../assets/fonts/gamefont.ttf");
+}
+
+@font-face{
+	font-family: "Nepali";
+	size: 20px;
+	src: url("../assets/fonts/Nepali.ttf");
+}
+@font-face{
+	font-family: "Menu";
+	size: 20px;
+	src: url("../assets/fonts/menus.ttf");
+}
+
+body{
+	font-family: GameFont;
+	background-color: rgb(26, 26, 26);
+	position:fixed;
+    	top:0;
+    	bottom:0;
+    	left:0;
+	right:0;
+}
+
+html{
+	position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+#game_wrapper{
+	margin: auto;	
+}
