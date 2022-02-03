@@ -1,5 +1,5 @@
 Howler.html5PoolSize = 10;
-var gamesandapp = !(window.location.href.indexOf("localhost") > -1);
+var gamesandapp = false;
 
 getArrayFromRange = (Lower, Higher) => {
     if (Lower < Higher) {
