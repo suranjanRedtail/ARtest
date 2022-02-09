@@ -1,0 +1,151 @@
+body,html{
+    height: 100%;
+    margin:0;
+    background-color: rgb(255, 238, 0);
+    overflow: hidden;
+}
+.bgimage
+{
+    background-image: url(background.jpg); 
+    background-color: rgb(235, 235, 235);
+    background-blend-mode: multiply;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s;
+}
+.imageblur{       
+    background-color: rgb(102, 102, 102) !important;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.mail{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform-origin: 50% 60%;
+    transform: translate(-50%,-50%);
+    background-image: url("closed.png"); 
+    transition: 0.5s;
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    background-size:contain;
+    background-repeat: no-repeat;
+    animation: shake 1.5s ease-in-out;    
+    animation-iteration-count: infinite;   
+    animation-delay: 2s; 
+}
+
+.mail:hover{
+    background-image: url(opened.png); 
+    transform: translate(-50%,-50%) scale(1.5,1.5);
+    animation: zoom 0.5s;      
+}
+
+.frame{
+    background-image: url(frame.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    position:relative;
+    opacity: 0;
+    z-index: -1;
+    height: 100%;
+    bottom: 0;  
+    left: 50%;   
+    transition: 1s;  
+    transform: translate(-50% ,100%); 
+}
+.heart{    
+    position:absolute;
+    z-index: -1;
+    top: 12%; 
+    right: -12%;   
+    transition: 0.5s; 
+    font-size: 30px;    
+}
+
+.mail:hover .frame{
+    opacity: 100%;
+    transform: translate(-50% ,80%) scale(1.5,1.5);
+} 
+.mail:hover .heart{    
+    opacity: 0;  
+}
+@keyframes shake {
+    0% {transform: translate(-50%,-50%);}
+    10% {transform: translate(-50%,-50%) rotate(-10deg)}
+    20% {transform:translate(-50%,-50%) rotate(10deg)}
+    30% {transform: translate(-50%,-50%) rotate(-10deg)}
+    40% {transform:translate(-50%,-50%) rotate(10deg)}
+    50% {transform:translate(-50%,-50%) rotate(0deg)}
+    100% {transform: translate(-50%,-50%);}
+}
+@keyframes zoom {
+    0% {transform: translate(-50%,-50%);}
+    100% {transform: translate(-50%,-50%) scale(1.5,1.5);}
+}
+
+.maildissappear{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("opened.png"); 
+    transition: 0.5s;
+    height: 100px;
+    width: 100px;
+    z-index: 2;
+    background-size:contain;
+    background-repeat: no-repeat;
+    animation: disappear 0.5s;   
+    animation-fill-mode: forwards;    
+}
+
+@keyframes disappear {
+    0% {transform: translate(-50%,-50%)scale(1.5,1.5);}
+    100% {transform: translate(-50%,-50%) scale(3); opacity: 0;}    
+}
+
+.letterbackground{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform-origin: 50% 60%;
+    transform: translate(-50%,-50%) scale(0,0);
+    background-image: url("letterbg.png"); 
+    background-size:contain;
+    background-repeat: no-repeat;
+    transition: all 0.75s ease-in-out;
+    height: 600px;
+    width: 469px;
+    font-family: fancy;
+    font-size: 32px;       
+    padding: 40px;
+    padding-left: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 0;
+    opacity: 0;
+}
+
+.scaleup{
+    transform: translate(-50%,-50%) scale(1,1) !important;  
+    z-index: 3 !important;  
+    opacity: 1;
+}
+@font-face {
+    font-family: fancy;
+    src: url(ChopinScript.ttf);
+  }
+  @font-face {
+    font-family: fancy2;
+    src: url( MonsieurLaDoulaise-Regular.ttf);
+  } 
+  .name{
+      float: left;
+  }
+
+
+

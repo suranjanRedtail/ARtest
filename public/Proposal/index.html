@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Bidu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bgimage" id="bg"></div>    
+    <div class="mail"id="mailicon"><div class="frame"></div><div class="heart">❤️</div></div>
+    <div class="letterbackground"id="letter"> Dearest Pixie,<br>Last year accepting your proposal was the best decision of my life. You gave me so much more than the 1mm of romance I heard rumors of. You have melted this heart of mine and made me a person, a better person, your person. I love you my dearest Bidu. Please be my valantine again.<br><span class="name">Your Good Sire<span></div>    
+    <script>
+        var clicked = false;
+        $("#mailicon").click(function(){
+            $(this).removeClass("mail"); 
+            $(this).addClass("maildissappear");            
+            $("#letter").addClass("scaleup"); 
+            $('#bg').addClass("imageblur");
+            clicked=true;                     
+            })
+        $('.mail').hover(function(){
+            $('#bg').addClass("imageblur");
+        },function(){
+            if(!clicked)
+            {
+                $('#bg').removeClass("imageblur");
+            }
+        });        
+        $("#bg").click(function(){
+            clicked=false;
+            $("#letter").removeClass("scaleup"); 
+            $('#bg').removeClass("imageblur"); 
+            $("#mailicon").removeClass("maildissappear");
+            $("#mailicon").addClass("mail");            
+        })
+        
+    </script>
+</body>
+</html>

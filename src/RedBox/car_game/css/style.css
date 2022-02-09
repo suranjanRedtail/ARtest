@@ -1,0 +1,107 @@
+#UI_div {
+    z-index: 10;    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 720px;
+	grid-template-rows: 50% 50%;
+	background-color:#ffffff00;
+}
+#main_div
+{
+    position: relative;
+    height: 1280px;
+    width:720px;
+    top: 0;
+    left: 0;  
+}
+#main_canvas{
+    position: absolute;
+    height: 1280px;
+    width: 720px;
+}
+
+.ui_content{
+    margin: auto;
+    -webkit-user-select: none;    
+}
+
+.Play_Button {
+	-webkit-user-select: none;  
+    background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+	background-color:#f0c911;
+	border-radius:16px;
+	border:4px solid #e65f44;
+	display:inline-block;	
+	color:#c92200;
+	font-family:Trebuchet MS;
+	font-size:50px;
+	padding:12px 50px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #ded17c;
+    margin:auto;
+}
+.Play_Button:hover {
+	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+	background-color:#f2ab1e;
+}
+.Play_Button:active {
+	position:relative;
+	top:1px;
+}
+.Play_Button:focus {
+    outline: none;
+  }
+
+.Main_text{
+    -webkit-user-select: none;
+    font-family: verdana;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 80px;
+    color: rgb(255, 242, 0);
+    text-shadow: rgb(0, 0, 0) 0px 0px 3px;
+}
+
+.CarSelect {
+    -webkit-user-select: none;
+    text-align: center;
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	background-color:#eae0c2;
+	border-radius:9px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.CarSelect:hover {
+	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	background-color:#ccc2a6;
+}
+.CarSelect:active {
+	position:relative;
+	top:1px;
+}
+
+.Score_Text {
+    -webkit-user-select: none;
+	background-color:transparent;
+	display:inline-block;
+	color:#d92400;
+	font-family:Arial;
+	font-size:60px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
